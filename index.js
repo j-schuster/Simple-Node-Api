@@ -3,7 +3,6 @@ const express = require('express'),
           port = process.env.PORT || 'localhost:3000',
           bodyParser = require('body-parser')
           
-
 const questionRoutes = require('./routes/questions')
 
 app.use(bodyParser.json())
