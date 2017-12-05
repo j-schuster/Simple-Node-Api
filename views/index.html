@@ -8,12 +8,43 @@
 </head>
 <body>
   <h1>JavaScript Questions API</h1> 
-  <h2>An API for JavaScript Questions</h2>
   
   <h4>This is an API for a currently work in progress React Native Application that allows JavaScript developers test their knowledge about a variety of JavaScript topics.</h4>
   <h4>The tool will provide feedback on a developer's knowledge and expose the areas that need study. The app will allow a user to take a timed test according to a specific experince level and technology, and optionally compete against other developers.</h4>        
   <h4>All developers are welcome to contribute to the project, either by helping to build the app, or by extending the questions.</h4>  
-  <h2>To learn more about contributing, contact Johann at <i>schuster.dev@gmail.com</i></h2>
+ 
+  <h4>If you're interested in contributing to the questions, make a post request from any browser to the following URL: </h4>
+  <p><i>https://js-questions-api.herokuapp.com/api/questions</i></p>
+  <h4>Each post must be an object that includes the fields from the following example.</h4>
+  <hr/>
+ 
+   <code class="object">
+     <pre>$.ajax({
+        type: "POST",   
+        url: url,
+        data: data,
+        success: success,
+        dataType: dataType
+      });</pre>
+   </code>
+  
+ <code class="object">
+     <pre>const data = {
+       title: 'What is a variable?',
+       category: 'Vanilla Js',
+       answers: ['a function','something that stores a value','a method','an api'],
+       correctAnswer: 'something that stores a value',
+       level: 'beginner'
+     }</pre>
+   </code>
+  <hr/>
+  <h4>Categories: React, Vanilla-js, Redux, Node, Angular, Functional Programming, es6+</h4>
+  <h4>Answers: must be an array consisting of 4 answers, 3 incorrect and 1 correct.</h4>
+  
+  <button class="category">Display questions by category</button>
+  <button class="level">By level</button>
+  <button class="all">Display all questions</button>
+  
     <ul class="list">
         
     </ul>    
@@ -23,11 +54,10 @@
 
 <!-- 
 TODO: 
-add link to api 
-add instructions to contribute a question
 add a list of current questions
 add github repo
 delete all questions in db and add in real ones
 
-url: https://js-questions-api.herokuapp.com/
+add readme + link to github
+detailed description on how to contribute in guthub
 -->
